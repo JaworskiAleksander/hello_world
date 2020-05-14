@@ -24,8 +24,12 @@ class SchoolListView(ListView):
     # school_list - this attribute is created automatically
     # className_list = className.objects.all()
     # alternatively, you can define under which var name data will be accessible
+    # context_object_name = 'className_list' when inheriting from ListView
     context_object_name = 'schools'
 
 class SchoolDetailView(DetailView):
+    # by default, context_object_name is set to className, nothing attached to it, when inheriting\
+    # from DetailView
     model = models.School
+    contex_object_name = 'school_detail'
     template_name = 'basic_app/school_detail.html'
