@@ -23,6 +23,8 @@ class SchoolListView(ListView):
     model = models.School
     # school_list - this attribute is created automatically
     # className_list = className.objects.all()
+    # alternatively, you can define under which var name data will be accessible
+    context_object_name = 'schools'
 
 class SchoolDetailView(DetailView):
     model = models.School
