@@ -31,5 +31,5 @@ class SchoolDetailView(DetailView):
     # by default, context_object_name is set to className, nothing attached to it, when inheriting\
     # from DetailView
     model = models.School
-    contex_object_name = 'school_detail'
+    context_object_name = 'school_detail'
     template_name = 'basic_app/school_detail.html'
