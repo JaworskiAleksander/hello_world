@@ -13,4 +13,10 @@ class IndexView(TemplateView):
         context['message'] = 'Message of the day'
         return context
 
+# Class Naming Convention
+# ClassNameViewType(ViewType)
 
+class SchoolListView(ListView):
+    model = models.School
+
+    
