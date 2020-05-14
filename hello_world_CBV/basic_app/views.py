@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django.views.generic import View, TemplateView, ListView, DetailView
+
+# import all class declarations from basic_app.models
 from . import models
 
 # Create your views here.
@@ -17,7 +19,10 @@ class IndexView(TemplateView):
 # ClassNameViewType(ViewType)
 
 class SchoolListView(ListView):
+    # model = models.className
     model = models.School
+    # school_list - this attribute is created automatically
+    # className_list = className.objects.all()
 
 class SchoolDetailView(DetailView):
     model = models.School
