@@ -52,4 +52,5 @@ class SchoolUpdateView(UpdateView):
     # connect this class to a proper model class
     model = models.School
 
-    # define action that app will render once user submits a filled-in form
+class SchoolDeleteView(DeleteView):
+    pass
