@@ -1,5 +1,8 @@
 from django.shortcuts import render
-from django.views.generic import View, TemplateView, ListView, DetailView
+from django.views.generic import (View, TemplateView,
+                                  ListView, DetailView,
+                                  CreateView, DeleteView,
+                                  UpdateView)
 
 # import all class declarations from basic_app.models
 from . import models
@@ -33,3 +36,6 @@ class SchoolDetailView(DetailView):
     model = models.School
     context_object_name = 'school_detail'
     template_name = 'basic_app/school_detail.html'
+
+class SchoolCreateView(CreateView):
+    pass
