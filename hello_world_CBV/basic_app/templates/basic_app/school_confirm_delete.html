@@ -1,10 +1,21 @@
 {% extends 'basic_app/basic_app_base.html' %}
 
 {% block body_block %}
-<h1>Delete {{ school.name }} ?</h1>
-<form action="" method="post">
-    {% csrf_token %}
-    <button type="submit" class="btn btn-danger">Delete</button>
-    <a href="{% url 'basic_app:detail' pk=school.id %}">Don't delete!</a>
-</form>
+<div class="row">
+    <div class="col-3">
+
+    </div>
+    <div class="col-6">
+        <h1>Delete {{ school.name }} ?</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Delete</button>
+            <a href="{% url 'basic_app:detail' pk=school.id %}">Don't delete!</a>
+        </form>
+    </div>
+    <div class="col-3">
+
+    </div>
+
+</div>
 {% endblock %}
