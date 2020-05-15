@@ -46,4 +46,5 @@ class SchoolCreateView(CreateView):
     # by default, django will search for app_name/className_form.html template to use
     # you can change that by specifying template_name
 
+class SchoolUpdateView(UpdateView):
     pass
