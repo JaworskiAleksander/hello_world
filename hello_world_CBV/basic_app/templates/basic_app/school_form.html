@@ -7,8 +7,20 @@
     {% else %}
         Update School Information
     {% endif%}
-
 </h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="button" value="
+        {% if not form.instance.pk %}
+            Create
+        {% else %}
+            Update
+        {% endif%}" 
+    class="btn btn-outline-warning">
+
+</form>
 
 
 {% endblock %}
