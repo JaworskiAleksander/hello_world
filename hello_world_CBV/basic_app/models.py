@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 class School(models.Model):
@@ -8,6 +9,12 @@ class School(models.Model):
 
     def __str__(self):
         return self.name
+
+    # this method tells which page to render once user submits a filled-in form
+    # no validaion of provided data, though - this has to be manually coded
+    def get_absolute_url(self):
+        return reverse("basic_app:detail", kwargs={"pk": self.pk})
+    
 
 
 class Student(models.Model):
