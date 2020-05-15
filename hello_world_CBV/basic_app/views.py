@@ -68,17 +68,26 @@ class SchoolDeleteView(DeleteView):
 #------------------------------------------------
 # STUDENT VIEWS
 
+# list all students in main page
+# use jumbotron class
+# button/link to create new student at the bottom
+# all items are links to a detailed view
 class StudentListView(ListView):
     pass
 
+# display details of a student
+# buttons to update or delete this student
 class StudentDetailView(DetailView):
     pass
 
+# create new student, nuff said
 class StudentCreateView(CreateView):
     pass
 
+# get student data in a form, specify which fields can be changed
 class StudentUpdateView(UpdateView):
     pass
 
+# delete!
 class StudentDeleteView(DeleteView):
     pass
