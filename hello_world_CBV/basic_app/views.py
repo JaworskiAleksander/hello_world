@@ -47,4 +47,9 @@ class SchoolCreateView(CreateView):
     # you can change that by specifying template_name
 
 class SchoolUpdateView(UpdateView):
-    pass
+    # specify which fields user will be able to update
+    fields = ('name', 'principal')
+    # connect this class to a proper model class
+    model = models.School
+
+    # define action that app will render once user submits a filled-in form
