@@ -10,7 +10,7 @@
         <form action="" method="post">
             {% csrf_token %}
             <button type="submit" class="btn btn-danger">Delete</button>
-            <a href="{% url 'basic_app:detail' pk=school.id %}">Don't delete!</a>
+            <a href="{% url 'basic_app:detail' pk=school.id %}" class="btn btn-success">Don't delete!</a>
         </form>
     </div>
     <div class="col-3">
