@@ -56,5 +56,7 @@ class SchoolUpdateView(UpdateView):
 class SchoolDeleteView(DeleteView):
     # connect class with a proper model Class
     model = models.School
+    # for DeleteView default context_object_name is lower_cased class name you've set model with
+    # DeleteView sends all fields, unless defined 'fields' class attribute
     # success_url class attribute - defines what template to use once an object is removed successfuly
     success_url = reverse_lazy('basic_app:list')
