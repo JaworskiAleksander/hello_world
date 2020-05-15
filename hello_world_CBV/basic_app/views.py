@@ -67,3 +67,18 @@ class SchoolDeleteView(DeleteView):
 
 #------------------------------------------------
 # STUDENT VIEWS
+
+class StudentListView(ListView):
+    pass
+
+class StudentDetailView(DetailView):
+    pass
+
+class StudentCreateView(CreateView):
+    pass
+
+class StudentUpdateView(UpdateView):
+    pass
+
+class StudentDeleteView(DeleteView):
+    pass
