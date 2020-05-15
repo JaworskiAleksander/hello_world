@@ -22,6 +22,9 @@ class IndexView(TemplateView):
 # Class Naming Convention
 # ClassNameViewType(ViewType)
 
+#------------------------------------------------
+# SCHOOL VIEWS
+
 class SchoolListView(ListView):
     # model = models.className
     model = models.School
@@ -60,3 +63,7 @@ class SchoolDeleteView(DeleteView):
     # DeleteView sends all fields, unless defined 'fields' class attribute
     # success_url class attribute - defines what template to use once an object is removed successfuly
     success_url = reverse_lazy('basic_app:list')
+
+
+#------------------------------------------------
+# STUDENT VIEWS
