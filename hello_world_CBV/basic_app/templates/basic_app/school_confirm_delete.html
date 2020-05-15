@@ -9,8 +9,10 @@
         <h1>Delete {{ school.name }} ?</h1>
         <form action="" method="post">
             {% csrf_token %}
-            <button type="submit" class="btn btn-danger">Delete</button>
-            <a href="{% url 'basic_app:detail' pk=school.id %}" class="btn btn-success">Don't delete!</a>
+            <div class="text-center">
+                <button type="submit" class="btn btn-danger">Delete</button>
+                <a href="{% url 'basic_app:detail' pk=school.id %}" class="btn btn-success">Don't delete!</a>
+            </div>
         </form>
     </div>
     <div class="col-3">
