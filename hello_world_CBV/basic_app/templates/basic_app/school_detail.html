@@ -12,4 +12,9 @@
     {% endfor %}
 
 </div>
+<div class="container">
+    <p class="text-center">
+        <a href="{% url 'basic_app:update' pk=school_detail.id %}" class="btn btn-outline-danger">Update</a>
+    </p>
+</div>
 {% endblock %}
