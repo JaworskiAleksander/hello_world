@@ -3,6 +3,7 @@ from django.views.generic import (View, TemplateView,
                                   ListView, DetailView,
                                   CreateView, DeleteView,
                                   UpdateView)
+from django.urls import reverse_lazy
 
 # import all class declarations from basic_app.models
 from . import models
@@ -53,4 +54,7 @@ class SchoolUpdateView(UpdateView):
     model = models.School
 
 class SchoolDeleteView(DeleteView):
-    pass
+    # connect class with a proper model Class
+    model = models.School
+    # success_url class attribute - defines what template to use once an object is removed successfuly
+    success_url = reverse_lazy('basic_app:list')
