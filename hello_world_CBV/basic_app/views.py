@@ -38,5 +38,9 @@ class SchoolDetailView(DetailView):
     template_name = 'basic_app/school_detail.html'
 
 class SchoolCreateView(CreateView):
+    # connecting CreateView with model class
     model = models.School
+    # specifying which fields can be entered by user
+    fields = ('name', 'principal', 'location')
+
     pass
