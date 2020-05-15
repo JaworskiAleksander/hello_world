@@ -29,6 +29,7 @@ class SchoolListView(ListView):
     # alternatively, you can define under which var name data will be accessible
     # context_object_name = 'className_list' when inheriting from ListView
     context_object_name = 'schools'
+    # from now on, use context_object_name to grab data provided by SchoolListView
 
 class SchoolDetailView(DetailView):
     # by default, context_object_name is set to className, nothing attached to it, when inheriting\
@@ -42,5 +43,7 @@ class SchoolCreateView(CreateView):
     model = models.School
     # specifying which fields can be entered by user
     fields = ('name', 'principal', 'location')
+    # by default, django will search for app_name/className_form.html template to use
+    # you can change that by specifying template_name
 
     pass
