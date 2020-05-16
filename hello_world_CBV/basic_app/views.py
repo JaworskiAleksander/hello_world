@@ -31,7 +31,7 @@ class SchoolListView(ListView):
     # school_list - this attribute is created automatically
     # className_list = className.objects.all()
     # alternatively, you can define under which var name data will be accessible
-    # context_object_name = 'className_list' when inheriting from ListView
+    # by default: context_object_name = 'className_list' when inheriting from ListView
     context_object_name = 'schools'
     # from now on, use context_object_name to grab data provided by SchoolListView
 
