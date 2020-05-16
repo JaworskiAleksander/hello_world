@@ -16,5 +16,6 @@ urlpatterns = [
 
     # Students ... should't this be split into two, separate applications?!
     path('students/', views.StudentListView.as_view(),name='student_list'),
-
+    # how will you handle situation, where you enter a pk that does not exists? 404?
+    path('students/<int:pk>', views.StudentDetailView.as_view(), name='student_detail'),
 ]
