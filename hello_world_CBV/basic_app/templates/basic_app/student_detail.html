@@ -11,6 +11,7 @@
 <div class="container">
     <p class="text-center">
         <a href="{% url 'basic_app:student_update' pk=student_detail.id %}" class="btn btn-outline-success">Update</a>
+        <a href="{% url 'basic_app:student_delete' pk=student_detail.id %}" class="btn btn-outline-danger">Delete</a>
     </p>
 </div>
 {% endblock %}
