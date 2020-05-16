@@ -4,7 +4,10 @@
 <h1>Welcome to a list of all students!</h1>
 <ol>
     {% for student in students %}
-    <li>{{ student.name }}, age {{ student.age }}, from {{ student.school }}</li>
+    <h4>
+        <li>{{ student.name }}, age {{ student.age }}, from {{ student.school }}
+        </li>
+    </h4>
 
     {% endfor %}
 
