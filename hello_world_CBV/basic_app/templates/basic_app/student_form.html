@@ -19,6 +19,7 @@
                     <button type="submit"
                         class="btn btn-outline-danger"
                         value="{% if not form.instance.pk %}Create New Student{% else %}Update Student's Information{% endif %}">
+                        {% if not form.instance.pk %}Create New Student{% else %}Update Student's Information{% endif %}
                     </button>
 
                 </div>
