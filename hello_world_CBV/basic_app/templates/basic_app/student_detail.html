@@ -6,6 +6,6 @@
     <p>Name:{{student_detail.name}}</p>
     <p>Age: {{student_detail.age}}</p>
     <!-- make this a clickable link! -->
-    <p>School: {{ student_detail.school }}</p>
+    <p>School: <a href="{% url 'basic_app:detail' pk=student_detail.school.id %}">{{ student_detail.school }}</a></p>
 </div>
 {% endblock %}
