@@ -1,0 +1,30 @@
+{% extends 'basic_app/basic_app_base.html' %}
+{% block body_block %}
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <h1>
+                {% if not form.instance.pk %}
+                    Create New Student
+                {% else %}
+                    Update Student's Information
+                {% endif %}
+            </h1>
+            <hr>
+            <form action="" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <div class="text-center">
+                    <button type="submit"
+                        class="btn btn-outline-danger"
+                        value="{% if not form.instance.pk %}Create New Student{% else %}Update Student's Information{% endif %}">
+                    </button>
+
+                </div>
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+{% endblock %}
