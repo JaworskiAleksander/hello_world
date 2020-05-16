@@ -5,11 +5,10 @@
 <ol>
     {% for student in students %}
     <h4>
-        <li>{{ student.name }}, age {{ student.age }}, from {{ student.school }}
+        <li>
+            {{ student.name }}, age {{ student.age }}, from {{ student.school }}
         </li>
     </h4>
-
     {% endfor %}
-
 </ol>
 {% endblock %}
