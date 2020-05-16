@@ -8,4 +8,9 @@
     <!-- make this a clickable link! -->
     <p>School: <a href="{% url 'basic_app:detail' pk=student_detail.school.id %}">{{ student_detail.school }}</a></p>
 </div>
+<div class="container">
+    <p class="text-center">
+        <a href="{% url 'basic_app:student_update' pk=student_detail.id %}" class="btn btn-outline-success">Update</a>
+    </p>
+</div>
 {% endblock %}
