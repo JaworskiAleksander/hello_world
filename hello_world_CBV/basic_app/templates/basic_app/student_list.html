@@ -6,7 +6,7 @@
     {% for student in students %}
     <h4>
         <li>
-            <a href="{% url 'basic_app:student_detail' pk=student.id %}">{{ student.name }}</a>, age {{ student.age }}, from {{ student.school }}
+            <a href="{% url 'basic_app:student_detail' pk=student.id %}">{{ student.name }}</a>, age {{ student.age }}, from <a href="{% url 'basic_app:detail' pk=student.school.id %}">{{ student.school }}</a>
         </li>
     </h4>
     {% endfor %}
