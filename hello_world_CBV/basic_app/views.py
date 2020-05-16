@@ -97,4 +97,5 @@ class StudentUpdateView(UpdateView):
 
 # delete!
 class StudentDeleteView(DeleteView):
-    pass
+    model = models.Student
+    success_url = reverse_lazy('basic_app:student_list')
