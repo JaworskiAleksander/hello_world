@@ -87,7 +87,8 @@ class StudentDetailView(DetailView):
 
 # create new student, nuff said
 class StudentCreateView(CreateView):
-    pass
+    model = models.Student
+    fields = ('name', 'age', 'schools')
 
 # get student data in a form, specify which fields can be changed
 class StudentUpdateView(UpdateView):
