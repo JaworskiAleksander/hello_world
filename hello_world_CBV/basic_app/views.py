@@ -92,7 +92,8 @@ class StudentCreateView(CreateView):
 
 # get student data in a form, specify which fields can be changed
 class StudentUpdateView(UpdateView):
-    pass
+    model = models.Student
+    fields = ('name', 'age', 'school')
 
 # delete!
 class StudentDeleteView(DeleteView):
