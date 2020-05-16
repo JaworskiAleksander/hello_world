@@ -73,6 +73,11 @@ class SchoolDeleteView(DeleteView):
 # button/link to create new student at the bottom
 # all items are links to a detailed view
 class StudentListView(ListView):
+    # connecting with proper data model
+    model = models.Student
+    # defining under what tag data will be sent to template
+    context_object_name = 'students'
+
     pass
 
 # display details of a student
