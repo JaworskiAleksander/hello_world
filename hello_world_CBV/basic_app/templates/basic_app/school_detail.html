@@ -8,7 +8,7 @@
     <p>Location: {{school_detail.location}}</p>
     <h3>Students:</h3>
     {% for student in school_detail.students.all %}
-        <p>{{ student.name }}, age {{ student.age }}</p>
+        <p><a href="{% url 'basic_app:student_detail' pk=student.id %}">{{ student.name }}</a>, age {{ student.age }}</p>
     {% endfor %}
 
 </div>
