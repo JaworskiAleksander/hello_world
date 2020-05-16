@@ -78,12 +78,12 @@ class StudentListView(ListView):
     # defining under what tag data will be sent to template
     context_object_name = 'students'
 
-    pass
-
 # display details of a student
 # buttons to update or delete this student
 class StudentDetailView(DetailView):
-    pass
+    model = models.Student
+    context_object_name = 'student_detail'
+    template_name = 'basic_app/student_detail.html'
 
 # create new student, nuff said
 class StudentCreateView(CreateView):
