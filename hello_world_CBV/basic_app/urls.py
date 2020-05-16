@@ -15,6 +15,6 @@ urlpatterns = [
     path('delete/<int:pk>', views.SchoolDeleteView.as_view(), name='delete'),
 
     # Students ... should't this be split into two, separate applications?!
-    path('students/', views.StudentListView.as_view(),'student_list'),
-    
+    path('students/', views.StudentListView.as_view(),name='student_list'),
+
 ]
