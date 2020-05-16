@@ -1,0 +1,11 @@
+{% extends 'basic_app/basic_app_base.html' %}
+{% block body_block %}
+<div class="jumbotron">
+    <h1>Welcome to Student Detail View</h4>
+    <h2>Student Details:</h2>
+    <p>Name:{{student_detail.name}}</p>
+    <p>Age: {{student_detail.age}}</p>
+    <!-- make this a clickable link! -->
+    <p>School: {{ student_detail.school }}</p>
+</div>
+{% endblock %}
